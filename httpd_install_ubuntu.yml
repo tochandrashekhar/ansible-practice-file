@@ -1,0 +1,16 @@
+---
+- name: installing httpd
+  hosts: dbservers
+  become: true
+  tasks: 
+  - name: installing httpd package 
+    apt: 
+      name: apache2
+      state: present
+    notify: start httpd service
+
+  handlers:   
+  - name: start httpd service
+    service:
+      name: apache2
+      state: started
