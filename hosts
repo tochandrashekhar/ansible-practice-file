@@ -8,3 +8,5 @@
 [dbservers]
 172.31.46.29
 
+[localhost]
+localhost
